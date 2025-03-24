@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Browsing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; overflow: hidden; text-align: center; background-color: #111; color: white; }
+        #header { padding: 10px; background: #222; color: white; }
+        .container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .site-box { width: 200px; height: 120px; border: 2px solid #333; position: relative; cursor: pointer; transition: transform 0.3s; overflow: hidden; border-radius: 10px; }
+        .site-box:hover { transform: scale(1.05); border-color: #fff; }
+        .site-box::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: blur(3px); opacity: 0.4; }
+        .site-box span { position: absolute; bottom: 0; width: 100%; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; font-size: 16px; text-align: center; }
+        .highlight { border-color: green !important; }
+        #iframe-container { width: 10px; height: 10px; position: absolute; top: -100px; left: -100px; }
+        iframe { width: 10px; height: 10px; border: none; }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Secure Browsing - Hidden Browser Open</h1>
+        <script async src="https://cse.google.com/cse.js?cx=c4b2ecd075af14566"></script>
+        <div class="gcse-search"></div>
+    </div>
+    <div class="container">
+        <div class="site-box" onclick="openInBrowser('https://www.movixo.info/')" data-name="movixo"><span>Movixo</span></div>
+        <div class="site-box" onclick="openInBrowser('https://123moviestan.com/')" data-name="123moviestan"><span>123MoviesTan</span></div>
+        <div class="site-box" onclick="openInBrowser('https://andyday.tv/movie')" data-name="andyday"><span>AndyDay TV</span></div>
+        <div class="site-box" onclick="openInBrowser('https://www.animeshqip.org/')" data-name="animeshqip"><span>AnimesHQIP</span></div>
+        <div class="site-box" onclick="openInBrowser('https://movies4u.lc/')" data-name="movies4u"><span>Movies4U</span></div>
+        <div class="site-box" onclick="openInBrowser('https://www.5movierulz.food/')" data-name="movierulz"><span>Movierulz</span></div>
+    </div>
+    <div id="iframe-container">
+        <iframe id="hiddenBrowser" src="about:blank"></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
